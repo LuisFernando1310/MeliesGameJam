@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: a215a2ca46f65824ca638b6205441957
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Cairlinn
+  fontNames:
+  - Cairlinn
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 37dea2c1bbcfdcd4885f06672bdb1713, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
