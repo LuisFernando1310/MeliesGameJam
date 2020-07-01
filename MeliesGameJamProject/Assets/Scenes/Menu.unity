@@ -265,6 +265,11 @@ PrefabInstance:
       propertyPath: ShapeModule.type
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 198415103927445688, guid: b9cac023b9fdc9d43a5fbf0e1b44b712,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     - target: {fileID: 199295886875436636, guid: b9cac023b9fdc9d43a5fbf0e1b44b712,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -2171,16 +2176,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1930104544}
-        m_MethodName: SetTrigger
-        m_Mode: 3
+      - m_Target: {fileID: 1930104545}
+        m_MethodName: Volta
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &853014336
 MonoBehaviour:
@@ -2621,7 +2626,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &1069778245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3798,16 +3803,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1806607712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_SubmitAction: {fileID: 2064916234097673511, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_CancelAction: {fileID: -1967631576421560919, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_LeftClickAction: {fileID: 8056856818456041789, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MiddleClickAction: {fileID: 3279352641294131588, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_RightClickAction: {fileID: 3837173908680883260, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &1806607714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4145,6 +4169,8 @@ GameObject:
   - component: {fileID: 1930104543}
   - component: {fileID: 1930104542}
   - component: {fileID: 1930104544}
+  - component: {fileID: 1930104545}
+  - component: {fileID: 1930104546}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4187,7 +4213,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 66.6
+  field of view: 57.9
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -4308,7 +4334,7 @@ Animator:
   m_PrefabInstance: {fileID: 1194347620467717191}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930104538}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 16c83f327870a5846812f0277f6fd66d, type: 2}
   m_CullingMode: 0
@@ -4319,6 +4345,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1930104545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930104538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0649aa23e69c244af6633166de3e7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1930104544}
+  anim: {fileID: 1930104546}
+--- !u!111 &1930104546
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930104538}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 6ff38b011eac4a14f9e7394624bfec5f, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &1938043408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4550,9 +4605,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1930104544}
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 1930104545}
+        m_MethodName: Vai
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4963,6 +5018,11 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1194347620785765019, guid: 785de4cca3dc232439389e3652304456,
+        type: 3}
+      propertyPath: field of view
+      value: 57.9
+      objectReference: {fileID: 0}
     - target: {fileID: 1194347620785765021, guid: 785de4cca3dc232439389e3652304456,
         type: 3}
       propertyPath: m_Name
@@ -4981,7 +5041,7 @@ PrefabInstance:
     - target: {fileID: 1194347620785765031, guid: 785de4cca3dc232439389e3652304456,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class Creditscamera : MonoBehaviour
 {
+    public Animator animator;
     public Animation anim;
-   
 
-    public void CameraVai()
+
+    public void Volta()
     {
-        anim.Play("CameraCredits");
+        animator.SetTrigger("voltacamera");
     }
+
+    public void Vai()
+    {
+        animator.SetTrigger("vaidenovo");
+    }
+
 }
