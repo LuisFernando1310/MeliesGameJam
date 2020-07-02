@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LuisaController : MonoBehaviour
+public class JorgeOK : MonoBehaviour
 {
+
     public CharacterController controller;
     public float speed = 5f;
-    public bool andando;
-    public bool empurrando;
-
+    public bool andandoJ;
     public Animator animator;
+    public bool poderAtivado = false;
 
+    // Update is called once per frame
     void Update()
     {
         Movimentacao();
@@ -19,30 +20,27 @@ public class LuisaController : MonoBehaviour
 
     void Movimentacao()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal2");
-        float vertical = Input.GetAxisRaw("Vertical2");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
 
         if (direction.magnitude >= 0.1f)
         {
-            andando = true;
+            andandoJ = true;
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, targetAngle, 0);
 
             controller.Move(direction * speed * Time.deltaTime);
         }
-
         else
         {
-            andando = false;
+            andandoJ = false;
         }
     }
 
-   
-
     void TocaAnimacao()
     {
-        if (andando == true)
+        if(andandoJ == true)
         {
             animator.SetBool("andando", true);
             animator.SetBool("idle", false);
@@ -53,17 +51,15 @@ public class LuisaController : MonoBehaviour
             animator.SetBool("idle", true);
         }
 
-        if (Input.GetKey(KeyCode.RightControl))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            empurrando = true;
-            animator.SetBool("empurra", true);
+            poderAtivado = true;
+            animator.SetBool("poder", true);
         }
         else
         {
-            animator.SetBool("empurra", false);
-            empurrando = false;
+            animator.SetBool("poder", false);
+            poderAtivado = false;
         }
-
     }
-
 }

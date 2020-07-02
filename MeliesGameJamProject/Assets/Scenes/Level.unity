@@ -18203,6 +18203,12 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.31, z: 0}
+--- !u!95 &530355620 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5435047488760855032, guid: 1e1d338988b779c45825f5413f811dc3,
+    type: 3}
+  m_PrefabInstance: {fileID: 530355616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &530355621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2731196936688014466, guid: 1e1d338988b779c45825f5413f811dc3,
@@ -18223,6 +18229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 530355618}
   speed: 5
+  andandoJ: 0
+  animator: {fileID: 530355620}
 --- !u!1 &533390383
 GameObject:
   m_ObjectHideFlags: 0
@@ -27792,6 +27800,12 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0.01, y: 0.33, z: 0.06}
+--- !u!95 &900997472 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 387811079984220263, guid: f1e2401fe12eb7547b4b4b2b72d6e015,
+    type: 3}
+  m_PrefabInstance: {fileID: 1650550701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &900997473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7776533339963335965, guid: f1e2401fe12eb7547b4b4b2b72d6e015,
@@ -66694,6 +66708,11 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 900997467}
+    - target: {fileID: 6751056396431251212, guid: f1e2401fe12eb7547b4b4b2b72d6e015,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 900997472}
     - target: {fileID: 6751056396431251213, guid: f1e2401fe12eb7547b4b4b2b72d6e015,
         type: 3}
       propertyPath: m_Constraints
