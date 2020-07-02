@@ -10,11 +10,14 @@ public class LuisaController : MonoBehaviour
     public bool empurrando;
 
     public Animator animator;
+    public Animator animBotaoGrande;
 
     void Update()
     {
         Movimentacao();
         TocaAnimacao();
+
+
     }
 
     void Movimentacao()
@@ -37,8 +40,6 @@ public class LuisaController : MonoBehaviour
             andando = false;
         }
     }
-
-   
 
     void TocaAnimacao()
     {
@@ -65,5 +66,27 @@ public class LuisaController : MonoBehaviour
         }
 
     }
+
+    void Interagiveis()
+    {
+        
+    }
+
+
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "botaoG")
+        {
+            animBotaoGrande.speed = 0;
+        }
+
+
+
+    }
+
+
+
 
 }

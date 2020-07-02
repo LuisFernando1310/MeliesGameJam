@@ -17,14 +17,13 @@ public class Coletaveis : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.tag == "Luisa")
-        {
+        if(collision.gameObject.CompareTag("Luisa"))
+            {
             this.gameObject.SetActive(false);
             chave++;
         }
-
-        
     }
 }
