@@ -23,9 +23,4 @@ public class PlayerInputHandler : MonoBehaviour
         if (mover != null)
             mover.SetInputVector(context.ReadValue<Vector2>());
     }
-
-    //public void OnPowerJ (CallbackContext context)
-    //{
-    //    Debug.Log("Poder ativado");
-    //}
 }
