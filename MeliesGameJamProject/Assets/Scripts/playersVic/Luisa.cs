@@ -7,6 +7,9 @@ public class Luisa : MonoBehaviour
 
     public int chaves = 0;
 
+    [SerializeField]
+    BarraMedoo barraDeMedo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +19,7 @@ public class Luisa : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,5 +30,13 @@ public class Luisa : MonoBehaviour
             chaves++;
         }
 
+        if (other.tag == "Jorge")
+            barraDeMedo.medo = false;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Jorge")
+            barraDeMedo.medo = true;
     }
 }
