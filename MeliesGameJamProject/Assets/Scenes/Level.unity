@@ -21730,7 +21730,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94693bf98aad02241a08b724d81a8c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaves: 0
   barraDeMedo: {fileID: 392471366}
 --- !u!54 &764325544
 Rigidbody:
@@ -73489,7 +73488,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: bb7221750f3d8bc41968110c808d4da7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -155.12
+      value: -154.36
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bb7221750f3d8bc41968110c808d4da7,
         type: 3}
