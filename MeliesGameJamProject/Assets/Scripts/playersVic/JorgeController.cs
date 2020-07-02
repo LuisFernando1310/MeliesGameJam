@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LuisaController : MonoBehaviour
+public class JorgeController : MonoBehaviour
 {
     public float speed = 20;
     private Vector3 pos;
@@ -16,8 +16,8 @@ public class LuisaController : MonoBehaviour
     {
 
         pos = transform.position;
-        pos.x += speed * Input.GetAxis("Horizontal") * Time.deltaTime;
-        pos.z += speed * Input.GetAxis("Vertical") * Time.deltaTime;
+        pos.x += speed * Input.GetAxis("Horizontal2") * Time.deltaTime;
+        pos.z += speed * Input.GetAxis("Vertical2") * Time.deltaTime;
         transform.position = pos;
     }
 }
