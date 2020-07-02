@@ -73,6 +73,21 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 822257cb-2e3a-489c-8c61-f9313b9373e6
     m_ActionName: Player/Movement[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3532382981676050142}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4b554fb4-ee4e-4c55-af78-b7eec53a9a92
+    m_ActionName: Player/PowerJ[/XInputControllerWindows/buttonWest,/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

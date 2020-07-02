@@ -9,6 +9,7 @@ public class PlayerInputHandler : MonoBehaviour
 {
     private PlayerInput playerInput;
     private Mover mover;
+    public bool poderAtivado;
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -22,4 +23,9 @@ public class PlayerInputHandler : MonoBehaviour
         if (mover != null)
             mover.SetInputVector(context.ReadValue<Vector2>());
     }
+
+    //public void OnPowerJ (CallbackContext context)
+    //{
+    //    Debug.Log("Poder ativado");
+    //}
 }

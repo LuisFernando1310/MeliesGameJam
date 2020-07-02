@@ -12,6 +12,14 @@
                     "expectedControlType": "Stick",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "PowerJ",
+                    "type": "Button",
+                    "id": "4b554fb4-ee4e-4c55-af78-b7eec53a9a92",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -135,6 +143,28 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "588ff281-d515-42db-9094-c0b5ca5713da",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PowerJ",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "131d7da1-cfed-4447-ac3e-7d7444d1606d",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PowerJ",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
