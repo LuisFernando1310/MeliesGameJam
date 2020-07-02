@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Jorge : MonoBehaviour
 {
-
+    public bool power = false;
 
     // Start is called before the first frame update
     void Start()
