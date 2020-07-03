@@ -20,6 +20,8 @@ public class JorgeOK : MonoBehaviour
 
     public GameObject[] Cruz;
 
+    public AudioSource audioSource;
+    public AudioClip clip;
 
     private void Start()
     {
@@ -70,7 +72,6 @@ public class JorgeOK : MonoBehaviour
         {
             poderAtivado = true;
             animator.SetBool("poder", true);
-
         }
         else
         {
@@ -100,5 +101,10 @@ public class JorgeOK : MonoBehaviour
     void Desligatuto()
     {
         tutopedrasJorge.SetActive(false);
+    }
+
+    void TocaPoder()
+    {
+        audioSource.PlayOneShot(clip);
     }
 }
