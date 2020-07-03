@@ -15,6 +15,7 @@ public class LuisaController : MonoBehaviour
     public Animator animator;
     public Animator animBotaoGrande;
     public BarraMedoo scriptbarramedo;
+    public Rigidbody caixa;
 
     void Update()
     {
@@ -59,17 +60,7 @@ public class LuisaController : MonoBehaviour
             animator.SetBool("idle", true);
         }
 
-        if (Input.GetKey(KeyCode.RightControl))
-        {
-            empurrando = true;
-            animator.SetBool("empurra", true);
-        }
-        else
-        {
-            animator.SetBool("empurra", false);
-            empurrando = false;
-        }
-
+        
     }
 
     void Interagiveis()
@@ -86,7 +77,13 @@ public class LuisaController : MonoBehaviour
             animBotaoGrande.speed = 0;
         }
 
-       
+        if (collision.gameObject.CompareTag("botaoG"))
+        {
+            Debug.Log("colidiu");
+            animBotaoGrande.speed = 0;
+        }
+
+
     }
 
     private void OnCollisionStay(Collision collision)
@@ -99,6 +96,24 @@ public class LuisaController : MonoBehaviour
         else
         {
             scriptbarramedo.medao = false;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "caixa")
+        {
+            if (Input.GetKey(KeyCode.RightControl))
+            {
+                empurrando = true;
+                animator.SetBool("empurra", true);
+                caixa.AddForce(transform.forward * 20);
+            }
+            else
+            {
+                animator.SetBool("empurra", false);
+                empurrando = false;
+            }
         }
     }
 
