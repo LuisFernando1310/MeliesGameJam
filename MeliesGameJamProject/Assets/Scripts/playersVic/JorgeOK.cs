@@ -8,6 +8,10 @@ public class JorgeOK : MonoBehaviour
     public CharacterController controller;
     public float speed = 5f;
     public bool andandoJ;
+
+    public float turnSmoothTime = 0.1f;
+    float turnSmoothVelocity;
+
     public Animator animator;
     public bool poderAtivado;
     public Animator animBotaoGrande;
@@ -31,7 +35,8 @@ public class JorgeOK : MonoBehaviour
         {
             andandoJ = true;
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, targetAngle, 0);
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0);
 
             controller.Move(direction * speed * Time.deltaTime);
         }
