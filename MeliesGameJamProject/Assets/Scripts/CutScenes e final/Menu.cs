@@ -24,4 +24,9 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("FINAL");
     }
+
+    public void Level()
+    {
+        SceneManager.LoadScene("Level");
+    }
 }

@@ -17,14 +17,20 @@ public class LuisaController : MonoBehaviour
     public Animator portaoChaves;
     public BarraMedoo scriptbarramedo;
     public Rigidbody caixa;
+    public Transform PosLuisa;
 
+   
     public int chaves;
 
+    private void Start()
+    {
+        Time.timeScale = 1;
+        transform.position = PosLuisa.transform.position;
+    }
     void Update()
     {
         Movimentacao();
         TocaAnimacao();
-
 
     }
 
@@ -86,6 +92,11 @@ public class LuisaController : MonoBehaviour
             portaoChaves.SetBool("todaschaves", true);
         }
 
+        if (collision.gameObject.CompareTag("chaoMorte"))
+        {
+            Debug.Log("CAIU");
+            scriptbarramedo.AbrePainel();
+        }
 
     }
 

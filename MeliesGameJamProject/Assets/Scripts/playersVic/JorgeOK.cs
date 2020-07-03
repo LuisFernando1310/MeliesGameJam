@@ -15,9 +15,15 @@ public class JorgeOK : MonoBehaviour
     public Animator animator;
     public bool poderAtivado;
     public Animator animBotaoGrande;
+    public Transform PosJorge;
 
     public GameObject[] Cruz;
 
+
+    private void Start()
+    {
+        transform.position = PosJorge.transform.position;
+    }
     // Update is called once per frame
     void Update()
     {
