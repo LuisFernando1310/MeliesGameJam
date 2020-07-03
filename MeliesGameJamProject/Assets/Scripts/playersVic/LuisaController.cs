@@ -6,9 +6,12 @@ public class LuisaController : MonoBehaviour
 {
     public CharacterController controller;
     public float speed = 5f;
+    public float turnSmoothTime = 0.1f;
+    float turnSmoothVelocity;
     public bool andando;
-    public bool empurrando;
 
+
+    public bool empurrando;
     public Animator animator;
     public Animator animBotaoGrande;
     public BarraMedoo scriptbarramedo;
@@ -31,7 +34,8 @@ public class LuisaController : MonoBehaviour
         {
             andando = true;
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, targetAngle, 0);
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0);
 
             controller.Move(direction * speed * Time.deltaTime);
         }
