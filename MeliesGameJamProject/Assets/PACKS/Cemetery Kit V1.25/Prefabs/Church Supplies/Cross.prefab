@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6400000}
   m_Layer: 0
   m_Name: Cross
-  m_TagString: Untagged
+  m_TagString: CruzTorta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 593.31604, y: 4.8092604, z: 946.4129}
-  m_LocalScale: {x: 0.15919489, y: 0.07959744, z: 0.57310206}
+  m_LocalScale: {x: 0.15919536, y: 0.07959762, z: 0.5731028}
   m_Children:
   - {fileID: 7648050026964423897}
   m_Father: {fileID: 0}
