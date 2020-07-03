@@ -73,20 +73,13 @@ public class LuisaController : MonoBehaviour
     }
 
 
-
-
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.tag == "botaoG")
+        if (collision.gameObject.CompareTag("botaoG"))
         {
             animBotaoGrande.speed = 0;
         }
-
-
-
     }
-
-
 
 
 }

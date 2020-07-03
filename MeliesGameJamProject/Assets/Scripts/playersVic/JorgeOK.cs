@@ -9,7 +9,8 @@ public class JorgeOK : MonoBehaviour
     public float speed = 5f;
     public bool andandoJ;
     public Animator animator;
-    public bool poderAtivado = false;
+    public bool poderAtivado;
+    public Animator animBotaoGrande;
 
     // Update is called once per frame
     void Update()
@@ -51,15 +52,26 @@ public class JorgeOK : MonoBehaviour
             animator.SetBool("idle", true);
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
         {
             poderAtivado = true;
             animator.SetBool("poder", true);
+
         }
         else
         {
             animator.SetBool("poder", false);
             poderAtivado = false;
+        }
+    }
+
+
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "botaoG" && poderAtivado == true)
+        {
+                animBotaoGrande.speed = 0;   
         }
     }
 }
