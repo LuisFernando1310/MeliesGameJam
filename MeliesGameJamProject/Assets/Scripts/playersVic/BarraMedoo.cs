@@ -24,10 +24,25 @@ public class BarraMedoo : MonoBehaviour
         {
             AumentaMedo();
         }
+
+        
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("CruzTorta"))
+        {
+            AumentaMedoRapido();
+        }
+    }
 
     void AumentaMedo()
+    {
+        valorMedo += 0.02f;
+        AtualizaVida(valorMedo);
+    }
+
+    void AumentaMedoRapido()
     {
         valorMedo += 0.05f;
         AtualizaVida(valorMedo);
