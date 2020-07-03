@@ -9,6 +9,8 @@ public class JorgeOK : MonoBehaviour
     public float speed = 5f;
     public bool andandoJ;
 
+    Vector3 direcao;
+
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
@@ -17,6 +19,9 @@ public class JorgeOK : MonoBehaviour
     public Animator animBotaoGrande;
     public Transform PosJorge;
     public GameObject tutopedrasJorge;
+
+    [SerializeField]
+    private Vector3 pos;
 
     public GameObject[] Cruz;
 
@@ -36,23 +41,17 @@ public class JorgeOK : MonoBehaviour
 
     void Movimentacao()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
+        
+        pos = this.transform.position;
+        pos.x += speed * Input.GetAxis("Horizontal") * Time.deltaTime;
+        pos.z += speed * Input.GetAxis("Vertical") * Time.deltaTime;
 
-        if (direction.magnitude >= 0.1f)
+        if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") !=0)
         {
-            andandoJ = true;
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0);
-
-            controller.Move(direction * speed * Time.deltaTime);
-        }
-        else
-        {
-            andandoJ = false;
-        }
+            direcao = (pos - this.transform.position).normalized;
+            transform.forward = direcao;
+        }  
+        this.transform.position = pos;
     }
 
     void TocaAnimacao()
