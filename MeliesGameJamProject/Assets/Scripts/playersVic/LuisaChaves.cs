@@ -5,6 +5,7 @@ using UnityEngine;
 public class LuisaChaves : MonoBehaviour
 {
     public int chaves = 0;
+    public Animator animportasaida;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,6 +13,11 @@ public class LuisaChaves : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             chaves++;
+        }
+
+        if(other.tag == "portaofinal" && chaves == 3)
+        {
+           
         }
     }
 }

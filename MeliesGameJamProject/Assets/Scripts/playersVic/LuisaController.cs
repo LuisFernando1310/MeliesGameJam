@@ -14,8 +14,11 @@ public class LuisaController : MonoBehaviour
     public bool empurrando;
     public Animator animator;
     public Animator animBotaoGrande;
+    public Animator portaoChaves;
     public BarraMedoo scriptbarramedo;
     public Rigidbody caixa;
+
+    public int chaves;
 
     void Update()
     {
@@ -77,10 +80,10 @@ public class LuisaController : MonoBehaviour
             animBotaoGrande.speed = 0;
         }
 
-        if (collision.gameObject.CompareTag("botaoG"))
+        if (collision.gameObject.CompareTag("botaoF"))
         {
-            Debug.Log("colidiu");
-            animBotaoGrande.speed = 0;
+            Debug.Log("abre");
+            portaoChaves.SetBool("todaschaves", true);
         }
 
 
@@ -114,6 +117,8 @@ public class LuisaController : MonoBehaviour
                 animator.SetBool("empurra", false);
                 empurrando = false;
             }
+
+
         }
     }
 

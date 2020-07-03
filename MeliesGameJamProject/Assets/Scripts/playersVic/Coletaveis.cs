@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Coletaveis : MonoBehaviour
 {
-    public int chave = 0;
+
+    public LuisaController scriptLuisa;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,9 @@ public class Coletaveis : MonoBehaviour
         if(collision.gameObject.CompareTag("Luisa"))
             {
             this.gameObject.SetActive(false);
-            chave++;
+            scriptLuisa.chaves++;
         }
+
+       
     }
 }

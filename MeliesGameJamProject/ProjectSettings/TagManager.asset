@@ -11,6 +11,9 @@ TagManager:
   - MEDO
   - CruzTorta
   - Cruz
+  - FINAL
+  - botaoF
+  - portaofinal
   layers:
   - Default
   - TransparentFX
