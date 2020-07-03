@@ -11,6 +11,7 @@ public class LuisaController : MonoBehaviour
 
     public Animator animator;
     public Animator animBotaoGrande;
+    public BarraMedoo scriptbarramedo;
 
     void Update()
     {
@@ -77,7 +78,23 @@ public class LuisaController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("botaoG"))
         {
+            Debug.Log("colidiu");
             animBotaoGrande.speed = 0;
+        }
+
+       
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Cruz"))
+        {
+            scriptbarramedo.medao = true;
+
+        }
+        else
+        {
+            scriptbarramedo.medao = false;
         }
     }
 

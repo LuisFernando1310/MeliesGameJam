@@ -12,6 +12,8 @@ public class JorgeOK : MonoBehaviour
     public bool poderAtivado;
     public Animator animBotaoGrande;
 
+    public GameObject[] Cruz;
+
     // Update is called once per frame
     void Update()
     {
@@ -65,13 +67,18 @@ public class JorgeOK : MonoBehaviour
         }
     }
 
-
+  
 
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "botaoG" && poderAtivado == true)
         {
                 animBotaoGrande.speed = 0;   
+        }
+
+        if((other.tag == "CruzTorta" && poderAtivado == true))
+        {
+            Destroy(other.gameObject);
         }
     }
 }

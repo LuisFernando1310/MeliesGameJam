@@ -10,6 +10,7 @@ public class BarraMedoo : MonoBehaviour
     public float valorMedo;
     public float totalmedo = 100f;
     public bool medo;
+    public bool medao;
 
     // Start is called before the first frame update
     void Start()
@@ -25,16 +26,14 @@ public class BarraMedoo : MonoBehaviour
             AumentaMedo();
         }
 
-        
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("CruzTorta"))
+        if (medao == true)
         {
             AumentaMedoRapido();
         }
+
     }
+
+    
 
     void AumentaMedo()
     {
@@ -42,9 +41,9 @@ public class BarraMedoo : MonoBehaviour
         AtualizaVida(valorMedo);
     }
 
-    void AumentaMedoRapido()
+    public void AumentaMedoRapido()
     {
-        valorMedo += 0.05f;
+        valorMedo += 0.1f;
         AtualizaVida(valorMedo);
     }
 
