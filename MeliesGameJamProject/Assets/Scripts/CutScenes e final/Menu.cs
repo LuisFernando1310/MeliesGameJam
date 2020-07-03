@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+
+    public AudioSource Botao;
+
     public void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // 1 cutscene
@@ -28,5 +31,10 @@ public class Menu : MonoBehaviour
     public void Level()
     {
         SceneManager.LoadScene("Level");
+    }
+
+   public void TocaBotao()
+    {
+        Botao.Play();
     }
 }
