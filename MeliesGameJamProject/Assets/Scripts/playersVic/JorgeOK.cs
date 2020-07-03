@@ -16,6 +16,7 @@ public class JorgeOK : MonoBehaviour
     public bool poderAtivado;
     public Animator animBotaoGrande;
     public Transform PosJorge;
+    public GameObject tutopedrasJorge;
 
     public GameObject[] Cruz;
 
@@ -84,12 +85,20 @@ public class JorgeOK : MonoBehaviour
     {
         if (other.tag == "botaoG" && poderAtivado == true)
         {
-                animBotaoGrande.speed = 0;   
+            tutopedrasJorge.SetActive(true);
+            animBotaoGrande.speed = 0;
+            Invoke("Desligartuto", 5);
+
         }
 
         if((other.tag == "CruzTorta" && poderAtivado == true))
         {
             Destroy(other.gameObject);
         }
+    }
+
+    void Desligatuto()
+    {
+        tutopedrasJorge.SetActive(false);
     }
 }

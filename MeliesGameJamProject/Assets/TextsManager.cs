@@ -10,6 +10,8 @@ public class TextsManager : MonoBehaviour
     public GameObject luisa;
     public GameObject MovimentacaoLuisa;
     public GameObject MovimentacaoJorge;
+    public GameObject tutomedo;
+    public GameObject tutopedras;
 
     private void Start()
     {
@@ -42,5 +44,18 @@ public class TextsManager : MonoBehaviour
     {
         MovimentacaoJorge.SetActive(false);
         MovimentacaoLuisa.SetActive(false);
+        tutomedo.SetActive(true);
+        Invoke("TutoPedras", 4f);
+    }
+
+    void TutoPedras()
+    {
+        tutomedo.SetActive(false);
+        tutopedras.SetActive(true);
+    }
+
+    void Acaboututo()
+    {
+        tutopedras.SetActive(false);
     }
 }
