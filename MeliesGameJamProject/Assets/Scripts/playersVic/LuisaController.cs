@@ -19,7 +19,10 @@ public class LuisaController : MonoBehaviour
     public Rigidbody caixa;
     public Transform PosLuisa;
 
-   
+    public AudioSource somBotaoG;
+    public AudioSource somportao;
+
+
     public int chaves;
 
     private void Start()
@@ -82,12 +85,14 @@ public class LuisaController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("botaoG"))
         {
+            somBotaoG.Play();
             Debug.Log("colidiu");
             animBotaoGrande.speed = 0;
         }
 
         if (collision.gameObject.CompareTag("botaoF"))
         {
+            somportao.Play();
             Debug.Log("abre");
             portaoChaves.SetBool("todaschaves", true);
         }
