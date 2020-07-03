@@ -7,6 +7,8 @@ public class Final : MonoBehaviour
     public GameObject titulogame;
     public GameObject TEXTO;
     public GameObject botoes;
+
+    public Animator animJorge;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class Final : MonoBehaviour
     public void Ativatexto()
     {
         TEXTO.SetActive(true);
-        Invoke("AtivaJorge", 6f);
+        
     }
 
     public void AtivaJorge()
@@ -31,5 +33,11 @@ public class Final : MonoBehaviour
         botoes.SetActive(true);
         TEXTO.SetActive(false);
         titulogame.SetActive(true);
+    }
+
+    public void JorgeVoa()
+    {
+        animJorge.SetBool("Final", true);
+        
     }
 }
