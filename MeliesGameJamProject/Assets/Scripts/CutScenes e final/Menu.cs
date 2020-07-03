@@ -7,6 +7,7 @@ public class Menu : MonoBehaviour
 {
 
     public AudioSource Botao;
+    public GameObject imagemabregame;
 
     public void Play()
     {
@@ -36,5 +37,10 @@ public class Menu : MonoBehaviour
    public void TocaBotao()
     {
         Botao.Play();
+    }
+
+    public void DesativaTelao()
+    {
+        imagemabregame.SetActive(false);
     }
 }

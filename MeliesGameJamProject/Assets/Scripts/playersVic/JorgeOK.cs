@@ -26,7 +26,7 @@ public class JorgeOK : MonoBehaviour
     public GameObject[] Cruz;
 
     public AudioSource audioSource;
-    public AudioClip clip;
+    public AudioSource poder;
 
     private void Start()
     {
@@ -79,13 +79,14 @@ public class JorgeOK : MonoBehaviour
         }
     }
 
-  
+
+    //tutopedrasJorge.SetActive(true);
 
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "botaoG" && poderAtivado == true)
         {
-            tutopedrasJorge.SetActive(true);
+            poder.Play();
             animBotaoGrande.speed = 0;
             Invoke("Desligartuto", 5);
 
@@ -102,8 +103,5 @@ public class JorgeOK : MonoBehaviour
         tutopedrasJorge.SetActive(false);
     }
 
-    void TocaPoder()
-    {
-        audioSource.PlayOneShot(clip);
-    }
+    
 }

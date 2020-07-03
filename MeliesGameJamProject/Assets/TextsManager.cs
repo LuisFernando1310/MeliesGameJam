@@ -21,8 +21,8 @@ public class TextsManager : MonoBehaviour
     private void Start()
     {
         //aqui trava os scripts
-        scriptjorge.GetComponent<LuisaController>().enabled = false;
-        scriptluisa.GetComponent<JorgeOK>().enabled = false;
+        scriptjorge.GetComponent<JorgeOK>().enabled = false;
+        scriptluisa.GetComponent<LuisaController>().enabled = false;
         Invoke("Fala2", 7f);
     }
 
@@ -42,8 +42,8 @@ public class TextsManager : MonoBehaviour
         jorge.SetActive(false);
         TextInicio2.SetActive(false);
         //
-        scriptluisa.GetComponent<LuisaController>().enabled = true;
-        scriptjorge.GetComponent<JorgeOK>().enabled = true;
+       scriptluisa.GetComponent<LuisaController>().enabled = true;
+       scriptjorge.GetComponent<JorgeOK>().enabled = true;
         MovimentacaoJorge.SetActive(true);
         MovimentacaoLuisa.SetActive(true);
         Invoke("TutoMedo", 4f);
@@ -61,7 +61,7 @@ public class TextsManager : MonoBehaviour
     {
         tutomedo.SetActive(false);
         tutopedras.SetActive(true);
-        Invoke("AcabouTuto", 4f);
+        Invoke("Acaboututo", 4f);
 
     }
 
