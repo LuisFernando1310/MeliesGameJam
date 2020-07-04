@@ -62,16 +62,24 @@ public class TextsManager : MonoBehaviour
     {
         tutomedo.SetActive(false);
         tutopedras.SetActive(true);
-        tutopedrasJorge.SetActive(true);
-        Invoke("Acaboututo", 8f);
+        
+        Invoke("Acaboututo", 6f);
 
     }
 
     void Acaboututo()
     {
         tutopedras.SetActive(false);
-        tutopedrasJorge.SetActive(false);
+        tutopedrasJorge.SetActive(true);
+        Invoke("Acaboututo2", 6f);
     }
 
+
+    void Acaboututo2()
+    {
+        
+        tutopedrasJorge.SetActive(false);
+       
+    }
 
 }
