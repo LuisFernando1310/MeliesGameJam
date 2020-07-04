@@ -55,7 +55,7 @@ public class TextsManager : MonoBehaviour
         MovimentacaoJorge.SetActive(false);
         MovimentacaoLuisa.SetActive(false);
         tutomedo.SetActive(true);
-        Invoke("TutoPedras", 4f);
+        Invoke("TutoPedras", 6f);
     }
 
     void TutoPedras()
