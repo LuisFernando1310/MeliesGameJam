@@ -13,6 +13,7 @@ public class BarraMedoo : MonoBehaviour
     public bool medao;
     public bool morreu;
     public GameObject painelmorte;
+    public AudioSource somMorte;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,8 @@ public class BarraMedoo : MonoBehaviour
             AumentaMedoRapido();
         }
 
+
+        
         VerificaMorte();
     }
 
@@ -62,7 +65,7 @@ public class BarraMedoo : MonoBehaviour
     {
         if(valorMedo >= 100)
         {
-            Debug.Log("Morreu por medo");
+            
             morreu = true;
             Invoke("AbrePainel", 2f);
         }
