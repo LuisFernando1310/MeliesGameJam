@@ -12,6 +12,7 @@ public class TextsManager : MonoBehaviour
     public GameObject MovimentacaoJorge;
     public GameObject tutomedo;
     public GameObject tutopedras;
+    public GameObject tutopedrasJorge;
 
     public AudioSource Gameplay;
 
@@ -61,13 +62,15 @@ public class TextsManager : MonoBehaviour
     {
         tutomedo.SetActive(false);
         tutopedras.SetActive(true);
-        Invoke("Acaboututo", 4f);
+        tutopedrasJorge.SetActive(true);
+        Invoke("Acaboututo", 8f);
 
     }
 
     void Acaboututo()
     {
         tutopedras.SetActive(false);
+        tutopedrasJorge.SetActive(false);
     }
 
 
