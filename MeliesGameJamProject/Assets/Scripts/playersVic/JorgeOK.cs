@@ -71,6 +71,7 @@ public class JorgeOK : MonoBehaviour
         {
             poderAtivado = true;
             animator.SetBool("poder", true);
+            poder.Play();
         }
         else
         {
@@ -86,7 +87,7 @@ public class JorgeOK : MonoBehaviour
     {
         if (other.tag == "botaoG" && poderAtivado == true)
         {
-            poder.Play();
+            
             animBotaoGrande.speed = 0;
             Invoke("Desligartuto", 5);
 

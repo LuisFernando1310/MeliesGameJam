@@ -69,4 +69,6 @@ public class TextsManager : MonoBehaviour
     {
         tutopedras.SetActive(false);
     }
+
+
 }
